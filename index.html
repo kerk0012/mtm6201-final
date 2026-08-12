@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Plant Palette | Home</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Additional CSS Library: Animate.css -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Skip Link -->
+    <a href="#main-content" class="visually-hidden-focusable skip-link">
+        Skip to main content
+    </a>
+
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+
+                <!-- Mobile hamburger -->
+                <button
+                    class="navbar-toggler order-1 d-lg-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Brand -->
+                <a
+                    class="navbar-brand order-2 order-lg-1 mx-auto mx-lg-0"
+                    href="index.html">
+                    🌿 Plant Palette
+                </a>
+
+                <!-- Mobile Search -->
+                <a
+                    class="mobile-search order-3 d-lg-none"
+                    href="recipes.html"
+                    aria-label="Search recipes">
+                    🔍
+                </a>
+
+                <!-- Desktop / Collapsed navigation -->
+                <div
+                    class="collapse navbar-collapse order-4 order-lg-2 w-100"
+                    id="mainNavbar">
+
+                    <ul class="navbar-nav ms-lg-auto align-items-lg-center mt-3 mt-lg-0">
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                aria-current="page"
+                                href="index.html">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="recipes.html">
+                                Recipes
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="meal-planner.html">
+                                Meal Planner
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#footer">
+                                Community
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#footer">
+                                About
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#footer">
+                                Contact
+                            </a>
+                        </li>
+
+                        <li class="nav-item ms-lg-3 d-none d-lg-block">
+                            <a
+                                class="btn btn-success rounded-pill px-4"
+                                href="recipes.html">
+                                Browse Recipes
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main id="main-content">
+
+        <!-- ================= HERO ================= -->
+        <section class="hero-section">
+            <div class="container py-5">
+
+                <div class="row align-items-center g-5">
+
+                    <!-- Text -->
+                    <div
+                        class="col-12 col-lg-6 order-2 order-md-1 animate__animated animate__fadeInLeft">
+
+                        <h1 class="hero-title">
+                            Eat fresh. Live well.
+                        </h1>
+
+                        <!-- Tablet / Desktop -->
+                        <p class="hero-copy d-none d-md-block">
+                            Discover hundreds of delicious vegetarian recipes,
+                            plan your weekly meals, and generate smart shopping
+                            lists — all in one place. Healthy eating made simple,
+                            sustainable and full of flavour.
+                        </p>
+
+                        <!-- Phone -->
+                        <p class="hero-copy d-md-none">
+                            Hundreds of vegetarian recipes, weekly meal plans
+                            and smart shopping lists — all in one place.
+                        </p>
+
+                        <div class="d-flex gap-3 flex-wrap mt-4">
+
+                            <a
+                                href="recipes.html"
+                                class="btn btn-success rounded-pill hero-button">
+                                Browse Recipes
+                            </a>
+
+                            <a
+                                href="meal-planner.html"
+                                class="btn btn-outline-success rounded-pill hero-button d-none d-md-inline-flex">
+                                Plan Meals
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <!-- Image -->
+                    <div
+                        class="col-12 col-lg-6 order-1 order-md-2 animate__animated animate__fadeInRight">
+
+                        <img
+                            src="images/hero-women-large.jpg"
+                            srcset="
+                                images/hero-women-small.jpg 480w,
+                                images/hero-women-medium.jpg 768w,
+                                images/hero-women-large.jpg 1200w
+                            "
+                            sizes="(max-width: 767px) 100vw, (max-width: 991px) 90vw, 50vw"
+                            alt="Two women enjoying a vegetarian meal together"
+                            class="img-fluid hero-image">
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= FEATURED RECIPES ================= -->
+        <section class="featured-section py-5">
+            <div class="container">
+
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="section-title mb-0">Featured Recipes</h2>
+
+                    <a
+                        href="recipes.html"
+                        class="view-all-link d-none d-md-inline">
+                        View all →
+                    </a>
+                </div>
+
+                <div class="row g-4">
+
+                    <!-- Recipe 1 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card recipe-card h-100">
+
+                            <img
+                                src="images/chickpea-buddha-bowl-large.jpg"
+                                srcset="
+                                    images/chickpea-buddha-bowl-small.jpg 500w,
+                                    images/chickpea-buddha-bowl-large.jpg 1000w
+                                "
+                                sizes="(max-width: 767px) 100vw, (max-width: 991px) 50vw, 33vw"
+                                alt="Colourful chickpea Buddha bowl with grains and fresh vegetables"
+                                class="card-img-top recipe-card-img">
+
+                            <div class="card-body">
+                                <h3 class="recipe-title">
+                                    Harvest Buddha Bowl
+                                </h3>
+
+                                <p class="recipe-description">
+                                    Roasted chickpeas, quinoa and crisp veggies
+                                    with tahini dressing.
+                                </p>
+
+                                <div class="recipe-meta">
+                                    <span class="recipe-badge">Lunch</span>
+                                    <span>· 25 min</span>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+
+
+                    <!-- Recipe 2 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card recipe-card h-100">
+
+                            <img
+                                src="images/garden-salad-large.jpg"
+                                srcset="
+                                    images/garden-salad-small.jpg 500w,
+                                    images/garden-salad-medium.jpg 800w,
+                                    images/garden-salad-large.jpg 1200w
+                                "
+                                sizes="(max-width: 767px) 100vw, (max-width: 991px) 50vw, 33vw"
+                                alt="Fresh green salad with avocado and cherry tomatoes"
+                                class="card-img-top recipe-card-img">
+
+                            <div class="card-body">
+                                <h3 class="recipe-title">
+                                    Garden Fresh Salad
+                                </h3>
+
+                                <p class="recipe-description">
+                                    Seasonal greens, avocado and cherry tomatoes
+                                    with lemon vinaigrette.
+                                </p>
+
+                                <div class="recipe-meta">
+                                    <span class="recipe-badge">Lunch</span>
+                                    <span>· 15 min</span>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+
+
+                    <!-- Recipe 3 -->
+                    <div class="col-12 col-lg-4 d-none d-lg-block">
+                        <article class="card recipe-card h-100">
+
+                            <img
+                                src="images/mezze-platter-large.jpg"
+                                srcset="
+                                    images/mezze-platter-small.jpg 500w,
+                                    images/mezze-platter-large.jpg 1000w
+                                "
+                                sizes="33vw"
+                                alt="Mediterranean mezze platter with hummus, falafel, olives and pita"
+                                class="card-img-top recipe-card-img">
+
+                            <div class="card-body">
+                                <h3 class="recipe-title">
+                                    Mezze Sharing Platter
+                                </h3>
+
+                                <p class="recipe-description">
+                                    Hummus, falafel, olives and warm pita for
+                                    the whole table.
+                                </p>
+
+                                <div class="recipe-meta">
+                                    <span class="recipe-badge">Dinner</span>
+                                    <span>· 35 min</span>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= CATEGORIES ================= -->
+        <section class="category-section pb-5">
+            <div class="container">
+
+                <h2 class="section-title mb-4">
+                    Browse by Category
+                </h2>
+
+                <div class="row g-3">
+
+                    <div class="col-4">
+                        <a href="recipes.html" class="category-card">
+
+                            <span class="category-icon">🥞</span>
+
+                            <strong>Breakfast</strong>
+
+                            <span class="category-count d-none d-md-block">
+                                46 recipes
+                            </span>
+
+                        </a>
+                    </div>
+
+                    <div class="col-4">
+                        <a href="recipes.html" class="category-card">
+
+                            <span class="category-icon">🥗</span>
+
+                            <strong>Lunch</strong>
+
+                            <span class="category-count d-none d-md-block">
+                                82 recipes
+                            </span>
+
+                        </a>
+                    </div>
+
+                    <div class="col-4">
+                        <a href="recipes.html" class="category-card">
+
+                            <span class="category-icon">🍲</span>
+
+                            <strong>Dinner</strong>
+
+                            <span class="category-count d-none d-md-block">
+                                64 recipes
+                            </span>
+
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer id="footer" class="site-footer">
+        <div class="container py-4 py-lg-5">
+
+            <div class="row g-4">
+
+                <div class="col-5 col-lg-4">
+                    <h2 class="footer-brand">
+                        Plant Palette
+                    </h2>
+
+                    <p class="footer-description">
+                        Fresh vegetarian recipes and meal plans
+                        for a healthier, greener life.
+                    </p>
+
+                    <small>© 2026 Plant Palette</small>
+                </div>
+
+
+                <div class="col-3 col-lg-2 offset-lg-1">
+                    <h3 class="footer-heading">Explore</h3>
+
+                    <ul class="footer-links">
+                        <li>
+                            <a href="recipes.html">Recipes</a>
+                        </li>
+                        <li>
+                            <a href="meal-planner.html">Meal Planner</a>
+                        </li>
+                        <li>
+                            <a href="#footer">Community</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="col-lg-2 d-none d-lg-block">
+                    <h3 class="footer-heading">Company</h3>
+
+                    <ul class="footer-links">
+                        <li><a href="#footer">About Us</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                        <li><a href="#footer">Careers</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-4 col-lg-2">
+                    <h3 class="footer-heading">Connect</h3>
+
+                    <ul class="footer-links">
+                        <li><a href="#footer">Instagram</a></li>
+                        <li><a href="#footer">Facebook</a></li>
+                        <li><a href="#footer">Pinterest</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+</html>

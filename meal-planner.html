@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Plant Palette | Meal Planner</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <a href="#main-content" class="visually-hidden-focusable skip-link">
+        Skip to main content
+    </a>
+
+
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+
+                <button
+                    class="navbar-toggler order-1 d-lg-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a
+                    class="navbar-brand order-2 order-lg-1 mx-auto mx-lg-0"
+                    href="index.html">
+                    🌿 Plant Palette
+                </a>
+
+                <a
+                    class="mobile-search order-3 d-lg-none"
+                    href="recipes.html"
+                    aria-label="Search recipes">
+                    🔍
+                </a>
+
+                <div
+                    class="collapse navbar-collapse order-4 order-lg-2 w-100"
+                    id="mainNavbar">
+
+                    <ul class="navbar-nav ms-lg-auto align-items-lg-center mt-3 mt-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="recipes.html">
+                                Recipes
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                aria-current="page"
+                                href="meal-planner.html">
+                                Meal Planner
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#footer">
+                                Community
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#footer">
+                                About
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#footer">
+                                Contact
+                            </a>
+                        </li>
+
+                        <li class="nav-item ms-lg-3 d-none d-lg-block">
+                            <a
+                                class="btn btn-success rounded-pill px-4"
+                                href="recipes.html">
+                                Browse Recipes
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main id="main-content">
+
+        <!-- ================= SECTION 1: INTRO ================= -->
+        <section class="planner-intro py-5">
+            <div class="container">
+
+                <h1 class="page-title">
+                    Meal Planner
+                </h1>
+
+                <p class="page-subtitle d-none d-md-block">
+                    Plan your vegetarian meals for the week
+                </p>
+
+
+                <div class="row align-items-center mt-4 g-3">
+
+                    <div class="col-12 col-md-6">
+
+                        <div class="week-selector">
+
+                            <button
+                                class="week-arrow"
+                                type="button"
+                                aria-label="Previous week">
+                                ‹
+                            </button>
+
+                            <strong>
+                                Week of June 22 – 28
+                            </strong>
+
+                            <button
+                                class="week-arrow"
+                                type="button"
+                                aria-label="Next week">
+                                ›
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-6 text-md-end d-none d-md-block">
+
+                        <button class="btn btn-success rounded-pill px-5 py-2">
+                            + Add Recipe
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= SECTION 2: PLANNER ================= -->
+        <section class="planner-section pb-5">
+            <div class="container">
+
+
+                <!-- ====================================================
+                     DESKTOP >= 992
+                ===================================================== -->
+                <div class="d-none d-lg-block">
+
+                    <!-- Days -->
+                    <div class="row planner-day-header g-2">
+
+                        <div class="col-1"></div>
+
+                        <div class="col text-center">Mon</div>
+                        <div class="col text-center">Tue</div>
+                        <div class="col text-center">Wed</div>
+                        <div class="col text-center">Thu</div>
+                        <div class="col text-center">Fri</div>
+                        <div class="col text-center">Sat</div>
+                        <div class="col text-center">Sun</div>
+
+                    </div>
+
+
+                    <!-- Breakfast -->
+                    <div class="row g-2 mt-1">
+
+                        <div class="col-1 planner-row-title">
+                            Breakfast
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell meal-filled">
+                                <strong>Berry Overnight Oats</strong>
+                                <span>10 min</span>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell meal-filled">
+                                <strong>Avocado Toast</strong>
+                                <span>8 min</span>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Lunch -->
+                    <div class="row g-2 mt-2">
+
+                        <div class="col-1 planner-row-title">
+                            Lunch
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell meal-filled">
+                                <strong>Harvest Buddha Bowl</strong>
+                                <span>25 min</span>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell meal-filled">
+                                <strong>Garden Fresh Salad</strong>
+                                <span>15 min</span>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Dinner -->
+                    <div class="row g-2 mt-2">
+
+                        <div class="col-1 planner-row-title">
+                            Dinner
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell meal-filled">
+                                <strong>Green Goddess Bowl</strong>
+                                <span>20 min</span>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell meal-filled">
+                                <strong>Mezze Sharing Platter</strong>
+                                <span>35 min</span>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ====================================================
+                     TABLET 768–991
+                ===================================================== -->
+                <div class="d-none d-md-block d-lg-none">
+
+                    <div class="row tablet-planner-header g-2">
+
+                        <div class="col-2"></div>
+                        <div class="col text-center">Breakfast</div>
+                        <div class="col text-center">Lunch</div>
+                        <div class="col text-center">Dinner</div>
+
+                    </div>
+
+
+                    <!-- Monday -->
+                    <div class="row g-2 mt-2 align-items-stretch">
+
+                        <div class="col-2 planner-row-title">Mon</div>
+
+                        <div class="col">
+                            <div class="planner-cell meal-filled">
+                                <strong>Berry Overnight Oats</strong>
+                                <span>10 min</span>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Tuesday -->
+                    <div class="row g-2 mt-2">
+
+                        <div class="col-2 planner-row-title">Tue</div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell meal-filled">
+                                <strong>Green Goddess Bowl</strong>
+                                <span>20 min</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Wednesday -->
+                    <div class="row g-2 mt-2">
+
+                        <div class="col-2 planner-row-title">Wed</div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell meal-filled">
+                                <strong>Harvest Buddha Bowl</strong>
+                                <span>25 min</span>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Thursday -->
+                    <div class="row g-2 mt-2">
+
+                        <div class="col-2 planner-row-title">Thu</div>
+
+                        <div class="col">
+                            <div class="planner-cell meal-filled">
+                                <strong>Avocado Toast</strong>
+                                <span>8 min</span>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Friday -->
+                    <div class="row g-2 mt-2">
+
+                        <div class="col-2 planner-row-title">Fri</div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell meal-filled">
+                                <strong>Mezze Sharing Platter</strong>
+                                <span>35 min</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Saturday -->
+                    <div class="row g-2 mt-2">
+
+                        <div class="col-2 planner-row-title">Sat</div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Sunday -->
+                    <div class="row g-2 mt-2">
+
+                        <div class="col-2 planner-row-title">Sun</div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell meal-filled">
+                                <strong>Garden Fresh Salad</strong>
+                                <span>15 min</span>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="planner-cell">+ Add meal</div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ====================================================
+                     MOBILE
+                ===================================================== -->
+                <div class="d-md-none">
+
+                    <!-- Week day buttons -->
+                    <div class="row g-2 mobile-day-selector">
+
+                        <div class="col">
+                            <button class="mobile-day active-day">M</button>
+                        </div>
+
+                        <div class="col">
+                            <button class="mobile-day">T</button>
+                        </div>
+
+                        <div class="col">
+                            <button class="mobile-day">W</button>
+                        </div>
+
+                        <div class="col">
+                            <button class="mobile-day">T</button>
+                        </div>
+
+                        <div class="col">
+                            <button class="mobile-day">F</button>
+                        </div>
+
+                        <div class="col">
+                            <button class="mobile-day">S</button>
+                        </div>
+
+                        <div class="col">
+                            <button class="mobile-day">S</button>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Breakfast -->
+                    <div class="mobile-meal-block mt-5">
+
+                        <h2 class="mobile-meal-title">
+                            Breakfast
+                        </h2>
+
+                        <article class="mobile-meal-card meal-filled">
+
+                            <div>
+                                <h3>Berry Overnight Oats</h3>
+                                <p>10 min · 320 kcal</p>
+                            </div>
+
+                            <img
+                                src="images/pesto-bowl-large.jpg"
+                                srcset="
+                                    images/pesto-bowl-small.jpg 500w,
+                                    images/pesto-bowl-large.jpg 1000w
+                                "
+                                sizes="120px"
+                                alt="Vegetarian breakfast bowl"
+                                class="mobile-meal-image">
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- Lunch -->
+                    <div class="mobile-meal-block">
+
+                        <h2 class="mobile-meal-title">
+                            Lunch
+                        </h2>
+
+                        <button class="mobile-empty-meal">
+                            + Add meal
+                        </button>
+
+                    </div>
+
+
+                    <!-- Dinner -->
+                    <div class="mobile-meal-block">
+
+                        <h2 class="mobile-meal-title">
+                            Dinner
+                        </h2>
+
+                        <article class="mobile-meal-card meal-filled">
+
+                            <div>
+                                <h3>Mezze Sharing Platter</h3>
+                                <p>35 min · 540 kcal</p>
+                            </div>
+
+                            <img
+                                src="images/mezze-platter-large.jpg"
+                                srcset="
+                                    images/mezze-platter-small.jpg 500w,
+                                    images/mezze-platter-large.jpg 1000w
+                                "
+                                sizes="120px"
+                                alt="Mediterranean mezze platter"
+                                class="mobile-meal-image">
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= SECTION 3: SHOPPING LIST ================= -->
+        <section class="shopping-section pb-5">
+            <div class="container">
+
+                <!-- Desktop Shopping List -->
+                <div class="shopping-box d-none d-lg-block">
+
+                    <div class="row align-items-start">
+
+                        <div class="col-lg-8">
+
+                            <h2 class="shopping-title">
+                                Shopping List
+                            </h2>
+
+                            <div class="row">
+
+                                <div class="col-6">
+
+                                    <div class="form-check">
+                                        <input
+                                            class="form-check-input"
+                                            type="checkbox"
+                                            checked
+                                            id="avocados">
+
+                                        <label
+                                            class="form-check-label"
+                                            for="avocados">
+                                            2 ripe avocados
+                                        </label>
+                                    </div>
+
+
+                                    <div class="form-check">
+                                        <input
+                                            class="form-check-input"
+                                            type="checkbox"
+                                            checked
+                                            id="quinoa">
+
+                                        <label
+                                            class="form-check-label"
+                                            for="quinoa">
+                                            500 g quinoa
+                                        </label>
+                                    </div>
+
+
+                                    <div class="form-check">
+                                        <input
+                                            class="form-check-input"
+                                            type="checkbox"
+                                            id="chickpeas">
+
+                                        <label
+                                            class="form-check-label"
+                                            for="chickpeas">
+                                            1 can chickpeas (400 g)
+                                        </label>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col-6">
+
+                                    <div class="form-check">
+                                        <input
+                                            class="form-check-input"
+                                            type="checkbox"
+                                            id="tomatoes">
+
+                                        <label
+                                            class="form-check-label"
+                                            for="tomatoes">
+                                            250 g cherry tomatoes
+                                        </label>
+                                    </div>
+
+
+                                    <div class="form-check">
+                                        <input
+                                            class="form-check-input"
+                                            type="checkbox"
+                                            id="basil">
+
+                                        <label
+                                            class="form-check-label"
+                                            for="basil">
+                                            1 bunch fresh basil
+                                        </label>
+                                    </div>
+
+
+                                    <div class="form-check">
+                                        <input
+                                            class="form-check-input"
+                                            type="checkbox"
+                                            id="milk">
+
+                                        <label
+                                            class="form-check-label"
+                                            for="milk">
+                                            1 L oat milk
+                                        </label>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-lg-4 text-end">
+
+                            <button
+                                class="btn btn-success rounded-pill px-5 py-2">
+                                Generate List
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Tablet + Mobile -->
+                <div class="d-lg-none">
+
+                    <button
+                        class="btn btn-success rounded-pill w-100 py-3">
+                        Generate Shopping List
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer id="footer" class="site-footer">
+        <div class="container py-4 py-lg-5">
+
+            <div class="row g-4">
+
+                <div class="col-5 col-lg-4">
+
+                    <h2 class="footer-brand">
+                        Plant Palette
+                    </h2>
+
+                    <p class="footer-description">
+                        Fresh vegetarian recipes and meal plans
+                        for a healthier, greener life.
+                    </p>
+
+                    <small>
+                        © 2026 Plant Palette
+                    </small>
+
+                </div>
+
+
+                <div class="col-3 col-lg-2 offset-lg-1">
+
+                    <h3 class="footer-heading">
+                        Explore
+                    </h3>
+
+                    <ul class="footer-links">
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="meal-planner.html">Meal Planner</a></li>
+                        <li><a href="#footer">Community</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div class="col-lg-2 d-none d-lg-block">
+
+                    <h3 class="footer-heading">
+                        Company
+                    </h3>
+
+                    <ul class="footer-links">
+                        <li><a href="#footer">About Us</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                        <li><a href="#footer">Careers</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div class="col-4 col-lg-2">
+
+                    <h3 class="footer-heading">
+                        Connect
+                    </h3>
+
+                    <ul class="footer-links">
+                        <li><a href="#footer">Instagram</a></li>
+                        <li><a href="#footer">Facebook</a></li>
+                        <li><a href="#footer">Pinterest</a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+</html>

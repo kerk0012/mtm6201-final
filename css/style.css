@@ -1,0 +1,984 @@
+/* =========================================================
+   PLANT PALETTE — CUSTOM THEME
+   ========================================================= */
+
+:root {
+    --bs-body-font-family: "Poppins", sans-serif;
+
+    --bs-body-bg: #ffffff;
+    --bs-body-color: #242424;
+
+    --bs-success: #2f6847;
+    --bs-success-rgb: 47, 104, 71;
+
+    --plant-green: #2f6847;
+    --plant-green-dark: #245238;
+    --plant-green-light: #e9f4ed;
+
+    --plant-cream: #f8f5ef;
+    --plant-border: #e5e0d8;
+
+    --plant-text: #242424;
+    --plant-muted: #696969;
+
+    --plant-radius: 16px;
+}
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--bs-body-font-family);
+    color: var(--plant-text);
+    background-color: #ffffff;
+}
+
+img {
+    max-width: 100%;
+}
+
+a,
+button,
+.btn,
+input {
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #9bc9aa;
+    outline-offset: 3px;
+    box-shadow: none !important;
+}
+
+.skip-link {
+    position: absolute;
+    z-index: 9999;
+    top: 10px;
+    left: 10px;
+
+    padding: 10px 16px;
+
+    background-color: #ffffff;
+    color: var(--plant-green);
+
+    border-radius: 8px;
+}
+
+
+/* =========================================================
+   BOOTSTRAP BUTTON OVERRIDES
+   ========================================================= */
+
+.btn-success {
+    --bs-btn-bg: var(--plant-green);
+    --bs-btn-border-color: var(--plant-green);
+
+    --bs-btn-hover-bg: var(--plant-green-dark);
+    --bs-btn-hover-border-color: var(--plant-green-dark);
+
+    --bs-btn-active-bg: var(--plant-green-dark);
+    --bs-btn-active-border-color: var(--plant-green-dark);
+
+    --bs-btn-focus-shadow-rgb: 47, 104, 71;
+}
+
+.btn-outline-success {
+    --bs-btn-color: var(--plant-green);
+    --bs-btn-border-color: var(--plant-green);
+
+    --bs-btn-hover-bg: var(--plant-green);
+    --bs-btn-hover-border-color: var(--plant-green);
+    --bs-btn-hover-color: #ffffff;
+
+    --bs-btn-active-bg: var(--plant-green);
+    --bs-btn-active-border-color: var(--plant-green);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+    min-height: 76px;
+
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    background-color: #ffffff;
+
+    border-bottom: 1px solid var(--plant-border);
+}
+
+.navbar-brand {
+    color: var(--plant-green);
+
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: var(--plant-green-dark);
+}
+
+.navbar-nav {
+    gap: 4px;
+}
+
+.navbar-nav .nav-link {
+    --bs-nav-link-color: var(--plant-text);
+
+    padding-left: 12px;
+    padding-right: 12px;
+
+    font-size: 0.94rem;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: var(--plant-green);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--plant-green);
+    font-weight: 600;
+}
+
+.navbar-toggler {
+    border: 0;
+    padding: 4px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.mobile-search {
+    color: var(--plant-text);
+
+    text-decoration: none;
+
+    font-size: 1.15rem;
+}
+
+
+/* =========================================================
+   COMMON TYPOGRAPHY
+   ========================================================= */
+
+.page-title,
+.hero-title {
+    color: var(--plant-green);
+
+    font-weight: 700;
+
+    letter-spacing: -0.03em;
+}
+
+.page-title {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+.page-subtitle {
+    color: #555555;
+
+    font-size: 1rem;
+
+    margin-top: 15px;
+}
+
+.section-title {
+    margin: 0;
+
+    font-size: clamp(1.55rem, 3vw, 2rem);
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   HOME — HERO
+   ========================================================= */
+
+.hero-section {
+    background-color: var(--plant-cream);
+}
+
+.hero-title {
+    margin-bottom: 26px;
+
+    font-size: clamp(2.4rem, 4vw, 3.3rem);
+
+    line-height: 1.08;
+}
+
+.hero-copy {
+    max-width: 620px;
+
+    margin-bottom: 0;
+
+    color: #4c4c4c;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+}
+
+.hero-button {
+    min-width: 155px;
+
+    padding: 12px 25px;
+
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   HOME — FEATURED RECIPES
+   ========================================================= */
+
+.featured-section {
+    background-color: #ffffff;
+}
+
+.recipe-card {
+    overflow: hidden;
+
+    border: 1px solid var(--plant-border);
+
+    border-radius: 14px;
+
+    background-color: #ffffff;
+
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.07);
+}
+
+.recipe-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.11);
+}
+
+.recipe-card-img,
+.recipe-list-image {
+    width: 100%;
+
+    height: 180px;
+
+    object-fit: cover;
+}
+
+.recipe-title {
+    margin-bottom: 5px;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+}
+
+.recipe-description {
+    margin-bottom: 12px;
+
+    color: var(--plant-muted);
+
+    font-size: 0.82rem;
+
+    line-height: 1.45;
+}
+
+.recipe-meta {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--plant-muted);
+
+    font-size: 0.76rem;
+}
+
+.recipe-badge {
+    padding: 3px 10px;
+
+    border-radius: 999px;
+
+    background-color: var(--plant-green-light);
+
+    color: var(--plant-green);
+
+    font-weight: 500;
+}
+
+.view-all-link {
+    color: var(--plant-green);
+
+    font-size: 0.9rem;
+
+    text-decoration: none;
+}
+
+.view-all-link:hover,
+.view-all-link:focus {
+    color: var(--plant-green-dark);
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   HOME — CATEGORIES
+   ========================================================= */
+
+.category-section {
+    background-color: #ffffff;
+}
+
+.category-card {
+    min-height: 140px;
+
+    padding: 20px 8px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--plant-text);
+
+    text-decoration: none;
+
+    text-align: center;
+
+    background-color: var(--plant-cream);
+
+    border: 1px solid var(--plant-border);
+
+    border-radius: 14px;
+}
+
+.category-card:hover,
+.category-card:focus {
+    color: var(--plant-green);
+
+    background-color: #f1eee8;
+
+    transform: translateY(-3px);
+}
+
+.category-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background-color: #a9d9b7;
+
+    font-size: 1.25rem;
+}
+
+.category-count {
+    color: var(--plant-muted);
+
+    font-size: 0.78rem;
+}
+
+
+/* =========================================================
+   RECIPES PAGE — HEADER
+   ========================================================= */
+
+.recipes-header {
+    padding-bottom: 30px !important;
+}
+
+.recipe-search {
+    height: 48px;
+
+    padding-left: 22px;
+
+    border: 1px solid var(--plant-border);
+
+    border-radius: 999px;
+}
+
+.recipe-search:focus {
+    border-color: var(--plant-green);
+
+    box-shadow: 0 0 0 0.2rem rgba(47, 104, 71, 0.12);
+}
+
+.filter-button {
+    padding: 7px 17px;
+
+    border-radius: 999px;
+
+    font-size: 0.85rem;
+}
+
+.sort-button {
+    min-width: 120px;
+
+    border-radius: 999px;
+}
+
+
+/* =========================================================
+   RECIPES PAGE — COLLECTION
+   ========================================================= */
+
+.recipe-list-image {
+    height: 205px;
+}
+
+.pagination {
+    --bs-pagination-color: var(--plant-text);
+
+    --bs-pagination-active-bg: var(--plant-green);
+    --bs-pagination-active-border-color: var(--plant-green);
+
+    --bs-pagination-hover-color: var(--plant-green);
+
+    gap: 8px;
+}
+
+.page-link {
+    min-width: 40px;
+
+    text-align: center;
+
+    border-radius: 8px !important;
+
+    color: var(--plant-text);
+}
+
+.recipes-cta {
+    background-color: var(--plant-cream);
+}
+
+
+/* =========================================================
+   MEAL PLANNER — INTRO
+   ========================================================= */
+
+.planner-intro {
+    padding-bottom: 25px !important;
+}
+
+.week-selector {
+    max-width: 300px;
+
+    padding: 9px 15px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    border: 1px solid var(--plant-border);
+
+    border-radius: 999px;
+
+    background-color: #ffffff;
+
+    font-size: 0.9rem;
+}
+
+.week-arrow {
+    border: 0;
+
+    background-color: transparent;
+
+    color: var(--plant-green);
+
+    font-size: 1.3rem;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   MEAL PLANNER — DESKTOP / TABLET
+   ========================================================= */
+
+.planner-day-header,
+.tablet-planner-header {
+    padding: 8px 0;
+
+    background-color: var(--plant-cream);
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    font-size: 0.82rem;
+}
+
+.planner-row-title {
+    display: flex;
+
+    align-items: center;
+
+    font-size: 0.8rem;
+
+    font-weight: 600;
+}
+
+.planner-cell {
+    min-height: 155px;
+
+    padding: 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+
+    text-align: center;
+
+    color: #777777;
+
+    border: 1px dashed #dddddd;
+
+    border-radius: 10px;
+
+    font-size: 0.72rem;
+}
+
+.planner-cell strong {
+    color: var(--plant-green);
+
+    font-size: 0.75rem;
+}
+
+.planner-cell span {
+    color: var(--plant-muted);
+}
+
+.meal-filled {
+    background-color: var(--plant-green-light);
+
+    border: 1px solid #a7d6b5;
+}
+
+
+/* =========================================================
+   MEAL PLANNER — MOBILE
+   ========================================================= */
+
+.mobile-day {
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--plant-border);
+
+    border-radius: 12px;
+
+    background-color: #ffffff;
+
+    font-weight: 500;
+}
+
+.mobile-day.active-day {
+    color: #ffffff;
+
+    background-color: var(--plant-green);
+
+    border-color: var(--plant-green);
+}
+
+.mobile-meal-block {
+    margin-bottom: 40px;
+}
+
+.mobile-meal-title {
+    margin-bottom: 12px;
+
+    font-size: 1.25rem;
+
+    font-weight: 700;
+}
+
+.mobile-meal-card {
+    min-height: 132px;
+
+    padding: 20px 24px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 14px;
+}
+
+.mobile-meal-card h3 {
+    margin-bottom: 8px;
+
+    color: var(--plant-green);
+
+    font-size: 1.05rem;
+
+    font-weight: 700;
+}
+
+.mobile-meal-card p {
+    margin: 0;
+
+    color: var(--plant-muted);
+}
+
+.mobile-meal-image {
+    width: 100px;
+    height: 100px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+.mobile-empty-meal {
+    width: 100%;
+
+    min-height: 130px;
+
+    border: 1px dashed #cccccc;
+
+    border-radius: 14px;
+
+    background-color: #ffffff;
+
+    color: #777777;
+
+    font-size: 1rem;
+}
+
+.mobile-empty-meal:hover,
+.mobile-empty-meal:focus {
+    border-color: var(--plant-green);
+
+    color: var(--plant-green);
+
+    background-color: var(--plant-cream);
+}
+
+
+/* =========================================================
+   SHOPPING LIST
+   ========================================================= */
+
+.shopping-box {
+    padding: 25px;
+
+    background-color: var(--plant-cream);
+
+    border: 1px solid var(--plant-border);
+
+    border-radius: 14px;
+}
+
+.shopping-title {
+    margin-bottom: 20px;
+
+    font-size: 1.25rem;
+
+    font-weight: 700;
+}
+
+.form-check {
+    margin-bottom: 12px;
+}
+
+.form-check-input:checked {
+    background-color: var(--plant-green);
+
+    border-color: var(--plant-green);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+    background-color: var(--plant-green);
+
+    color: #ffffff;
+}
+
+.footer-brand {
+    margin-bottom: 8px;
+
+    font-size: 1.2rem;
+
+    font-weight: 700;
+}
+
+.footer-description {
+    max-width: 270px;
+
+    margin-bottom: 12px;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 0.78rem;
+
+    line-height: 1.6;
+}
+
+.site-footer small {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-heading {
+    margin-bottom: 10px;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 0.8rem;
+
+    font-weight: 600;
+}
+
+.footer-links {
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    color: #ffffff;
+
+    font-size: 0.75rem;
+
+    text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+    color: #cce8d5;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    .hero-title {
+        margin-top: 10px;
+    }
+
+    .hero-image {
+        aspect-ratio: 16 / 6;
+    }
+
+    .planner-cell {
+        min-height: 120px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .navbar {
+        min-height: 74px;
+    }
+
+    .navbar-brand {
+        font-size: 1.15rem;
+    }
+
+    .hero-section .container {
+        padding-top: 28px !important;
+    }
+
+    .hero-title {
+        margin-top: 34px;
+        margin-bottom: 26px;
+
+        font-size: 2.45rem;
+    }
+
+    .hero-copy {
+        font-size: 1rem;
+
+        line-height: 1.65;
+    }
+
+    .hero-image {
+        aspect-ratio: 16 / 7;
+
+        border-radius: 15px;
+    }
+
+    .hero-button {
+        width: 100%;
+
+        min-height: 54px;
+
+        font-size: 1rem;
+    }
+
+    .featured-section {
+        padding-top: 35px !important;
+    }
+
+    .recipe-card-img,
+    .recipe-list-image {
+        height: 200px;
+    }
+
+    .category-card {
+        min-height: 150px;
+
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .category-card strong {
+        font-size: 0.82rem;
+    }
+
+    .recipes-header {
+        padding-top: 30px !important;
+    }
+
+    .recipe-search {
+        height: 58px;
+
+        font-size: 1rem;
+    }
+
+    .filter-button {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .week-selector {
+        max-width: 100%;
+
+        min-height: 62px;
+    }
+
+    .planner-section {
+        padding-top: 0;
+    }
+
+    .shopping-section {
+        padding-bottom: 60px !important;
+    }
+
+    .site-footer .container {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+    }
+
+    .footer-brand {
+        font-size: 1.05rem;
+    }
+
+    .footer-description {
+        font-size: 0.68rem;
+    }
+
+    .footer-heading {
+        font-size: 0.72rem;
+    }
+
+    .footer-links a {
+        font-size: 0.68rem;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS — 320px
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    .hero-title {
+        font-size: 2.1rem;
+    }
+
+    .category-card strong {
+        font-size: 0.7rem;
+    }
+
+    .footer-description {
+        font-size: 0.62rem;
+    }
+}
